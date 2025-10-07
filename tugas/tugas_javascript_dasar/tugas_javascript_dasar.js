@@ -109,9 +109,38 @@ var keempat = "javascript";
 
 var pertamaganti = pertama.replace("s" , "S")
 var keduaganti = kedua.substring(0 , 1).toUpperCase()
-var keduaganti2 = kedua.substring(1 , 6)
+var keduaganti2 = kedua.substring(1 , 5)
 var keduaganti3 = kedua.substring(5).toUpperCase()
+var ketigaganti = ketiga.substring(0 , 1).toUpperCase()
+var ketigaganti1 = ketiga.substring(1 , 6)
+var ketigaganti3 = ketiga.substring(6).toUpperCase()
+var keempatganti = keempat.toUpperCase()
 
 
 
-console.log(pertamaganti + " " + keduaganti + keduaganti2 + keduaganti3 + " " + ketiga + " " + keempat)
+
+console.log(pertamaganti + " " + keduaganti + keduaganti2 + keduaganti3 + " " + ketigaganti + ketigaganti1 + ketigaganti3 + " " + keempatganti)
+
+console.log(batas)
+console.log("soal nomor 3")
+
+var panjang= "12";
+var lebar = "7";
+var alas = "6";
+var tinggi = "13";
+
+var panjang1 = parseInt(panjang)
+var lebar2 = parseInt(lebar)
+var alas3 = parseInt(alas)
+var tinggi4 = parseInt(tinggi)
+
+
+var luas = panjang1 * lebar2
+var luassegitiga = alas3 * tinggi4 /2 
+
+
+console.log(panjang1)
+console.log(lebar2)
+console.log(alas3)
+console.log(tinggi4)
+console.log(luas)
