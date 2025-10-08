@@ -266,5 +266,88 @@ function karakterUnik(str){
 
 console.log(karakterUnik(text));
 
+console.log(batas)
+console.log(enter)
+console.log("Soal function")
+console.log(batas)
+
+var angka = [2,3,1,9,12,8,9,7]
+
+function angkaMinMax(minmax){
+  return "Nilai min adalah " + Math.min(...angka) + " dan nilai max adalah " + Math.max(...angka)
+}
+console.log(angkaMinMax(angka))
 
 
+console.log(batas)
+console.log(enter)
+console.log("Soal function")
+console.log(batas)
+function arrangeString (str) {
+  return str.split('').sort().join('')
+}
+
+
+// TEST CASE
+ console.log(arrangeString("bahasa")) // Output : aaabhs
+console.log(arrangeString("similikiti")) // Output : iiiiiklmst
+console.log(arrangeString("sanbercode")) // Output : abcdeenors
+ console.log(arrangeString("Lutfi")) // Output : ""
+
+
+ console.log(batas)
+console.log(enter)
+console.log("Soal function")
+console.log(batas)
+ function palindrome(kata) {
+  var reversed = kata.split('').reverse().join('');
+  return kata === reversed;
+}
+// TEST CASES
+console.log(palindrome('katak')); // true
+console.log(palindrome('blanket')); // false
+console.log(palindrome('nababan')); // true
+console.log(palindrome('haji ijah')); // true
+console.log(palindrome('mister')); // false
+
+console.log(batas)
+console.log(enter)
+console.log("Soal function")
+console.log(batas)
+function angkaPalindrome(num) {
+  var nextNum = num + 1;
+  while (true) {
+    var strNum = nextNum.toString();
+    var reversedStrNum = strNum.split('').reverse().join('');
+    if (strNum === reversedStrNum) {
+      return nextNum;
+    }
+    nextNum++;
+  }
+}
+
+
+// TEST CASES
+console.log(angkaPalindrome(8)); // 9
+console.log(angkaPalindrome(10)); // 11
+console.log(angkaPalindrome(117)); // 121
+console.log(angkaPalindrome(175)); // 181
+console.log(angkaPalindrome(1000)); // 1001
+
+console.log(batas)
+console.log(enter)
+console.log("Soal function")
+console.log(batas)
+function cekPermutasi(str1, str2) {
+  var normalize = function(str) {
+    return str.toLowerCase().replace(/[\W_]+/g, '').split('').sort().join('');
+  };
+  return normalize(str1) === normalize(str2);
+}
+
+
+// TEST CASES
+console.log(cekPermutasi("abah", "baha")) // true
+console.log(cekPermutasi("ondel", "delon")) // true
+console.log(cekPermutasi("paul sernine", "arsene lupin")) // true
+console.log(cekPermutasi("taco", "taca")) // false
