@@ -81,7 +81,7 @@ console.log('Fourth Word: ' + fourthWord3 + ', with length: ' + fourthWordLength
 console.log('Fifth Word: ' + fifthWord3 + ', with length: ' + fifthWordLength);
 
 console.log(batas)
-console.log("soal nomor 3")
+console.log("soal nomor 5")
 
 var abjad = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 // 1. password pertama : HELLO
@@ -100,7 +100,7 @@ console.log("kode 1: " + kode3)
 
 
 console.log(batas)
-console.log("soal nomor 3")
+console.log("soal nomor 6")
 
 var pertama = "saya";
 var kedua = "senang";
@@ -122,7 +122,7 @@ var keempatganti = keempat.toUpperCase()
 console.log(pertamaganti + " " + keduaganti + keduaganti2 + keduaganti3 + " " + ketigaganti + ketigaganti1 + ketigaganti3 + " " + keempatganti)
 
 console.log(batas)
-console.log("soal nomor 3")
+console.log("soal nomor 7")
 
 var panjang= "12";
 var lebar = "7";
@@ -144,3 +144,25 @@ console.log(lebar2)
 console.log(alas3)
 console.log(tinggi4)
 console.log(luas)
+console.log(luassegitiga)
+
+console.log(batas)
+console.log("soal nomor 8")
+
+var sisi= " 1 2 ";
+var jariJari= "7.5";
+
+var sisi1 = sisi.trim();
+var sisi2 = sisi1.replace(" ", "");
+var sisi3 = Number(sisi2);
+var jariJari2 = parseFloat(jariJari);
+var luasPersegi = sisi3 * sisi3;
+var luasLingkaran = 3.14 * jariJari2 * jariJari2;
+
+console.log(sisi1);
+console.log(sisi2);
+console.log(sisi3);
+console.log(jariJari2);
+console.log(luasPersegi);
+console.log(luasLingkaran);
+
