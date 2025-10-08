@@ -164,9 +164,4 @@ console.log(sisi2);
 console.log(sisi3);
 console.log(jariJari2);
 console.log(luasPersegi);
-<<<<<<< HEAD
 console.log(luasLingkaran);
-
-=======
-console.log(luasLingkaran);
->>>>>>> d33f72562e80cda44603e4be99a89ff07ea84dcd
