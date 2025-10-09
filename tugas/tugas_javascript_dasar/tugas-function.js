@@ -351,3 +351,115 @@ console.log(cekPermutasi("abah", "baha")) // true
 console.log(cekPermutasi("ondel", "delon")) // true
 console.log(cekPermutasi("paul sernine", "arsene lupin")) // true
 console.log(cekPermutasi("taco", "taca")) // false
+
+console.log(batas)
+console.log(enter)
+console.log("Soal Object")
+console.log(batas)
+
+var buah = [
+  {nama: "nanas",  warna: "Kuning", "ada bijinya": "tidak", harga: 9000 },
+  {nama: "jeruk",  warna: "oranye", "ada bijinya": "ada", harga: 9000 },
+  {nama: "semangka",  warna: "hijau & merah", "ada bijinya": "ada", harga: 9000 },
+  {nama: "pisang",  warna: "Kuning", "ada bijinya": "tidak", harga: 9000 }
+]
+
+var cekBuah =buah.filter(function(item){
+  return item["ada bijinya"] != "ada"
+})
+
+console.log(cekBuah)
+
+console.log(batas)
+console.log(enter)
+console.log("Soal Object")
+console.log(batas)
+
+function tambahDataFilm(nama, durasi, genre, tahun){
+  dataFilm.push({nama, durasi, genre, tahun})
+}
+var dataFilm = []
+
+tambahDataFilm("LOTR", "2 jam", "action", "1999")
+tambahDataFilm("avenger", "2 jam", "action", "2019")
+tambahDataFilm("spiderman", "2 jam", "action", "2004")
+tambahDataFilm("juon", "2 jam", "horror", "2004")
+console.log(dataFilm)
+
+console.log(batas)
+console.log(enter)
+console.log("Soal Object")
+console.log(batas)
+
+var people =[
+  {name: "John", job: "Programmer", gender: "male", age: 30},
+  {name: "Sarah", job: "Model", gender: "female", age: 27},
+  {name: "Jack", job: "Engineer", gender: "male", age: 25},
+  {name: "Ellie", job: "Designer", gender: "female", age: 35},
+  {name: "Danny", job: "Footballer", gender: "male", age: 30},
+]
+
+var dataMale = people.filter(function(person) {
+  return person.gender === "male" && person.age >=29;
+});
+
+console.log("Data Male:");
+console.log(dataMale);
+
+console.log(batas)
+console.log(enter)
+console.log("Soal Object")
+console.log(batas)
+
+
+
+var totalAge = people.reduce(function(sum, person) {
+  return sum + person.age;
+}, 0);
+
+var averageAge = totalAge / people.length;
+
+console.log("Rata-rata umur:", averageAge);
+
+console.log(batas)
+console.log(enter)
+console.log("Soal Object")
+console.log(batas)
+
+var people =[
+  {name: "John", job: "Programmer", gender: "male", age: 30},
+  {name: "Sarah", job: "Model", gender: "female", age: 27},
+  {name: "Jack", job: "Engineer", gender: "male", age: 25},
+  {name: "Ellie", job: "Designer", gender: "female", age: 35},
+  {name: "Danny", job: "Footballer", gender: "male", age: 30},
+]
+
+var sortAge = people.sort(function(a, b) {
+  return a.age - b.age;
+});
+
+
+for(var i = 0; i < people.length; i++){
+  console.log((i+1) + ". " + sortAge[i].name)
+}
+
+console.log(batas)
+console.log(enter)
+console.log("Soal Object")
+console.log(batas)
+
+var phone = {
+  name: "Samsung Galaxy Note 20",
+  brand: "Samsung",
+  colors: ["Black"],
+  release: 2020
+}
+function addColors(warna){
+  phone.colors.push(warna)
+  return phone.colors
+  
+}
+addColors("Gold")
+addColors("Silver")
+addColors("Brown")
+console.log(phone)
