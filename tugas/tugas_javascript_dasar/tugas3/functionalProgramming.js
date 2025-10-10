@@ -73,3 +73,23 @@ sort(people)
 console.log(enter)
 console.log("Soal 4")
 console.log(batas)
+
+var phones=[
+  {name: "Samsung Galaxy A52", brand: "Samsung", year: 2021, colors: ["black", "white"]},
+  {name: "Redmi Note 10 Pro", brand: "Xiaomi", year: 2021, colors: ["white", "blue"]},
+  {name: "Redmi Note 9 Pro", brand: "Xiaomi", year: 2020, colors: ["white", "blue", "black"]},
+  {name: "Iphone 12", brand: "Apple", year: 2020, colors: ["silver", "gold"]},
+  {name: "Iphone 11", brand: "Apple", year: 2019, colors: ["gold", "black", "silver"]},
+]
+
+const filtered = phones.filter(phone => phones.colors == "black")
+
+const brand = phones.sort((a,b)=> a.year - b.year)
+
+const newPhones = (arr, index = 0, nomor = 1)=>{
+  if(index >= arr.length)return
+  console.log(`${nomor}. ${arr[index].name} - ${arr[index].colors}`)
+  return newPhones(arr, index +1, nomor + 1)
+}
+
+newPhones(brand)
