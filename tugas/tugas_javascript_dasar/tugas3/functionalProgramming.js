@@ -82,6 +82,7 @@ var phones=[
   {name: "Iphone 11", brand: "Apple", year: 2019, colors: ["gold", "black", "silver"]},
 ]
 
+<<<<<<< HEAD
 const newPhones = phones.filter(phone => phone.colors.includes("black"))
 
 const sortPhone = newPhones.sort((a, b) => a.year - b.year)
@@ -95,3 +96,16 @@ function phone(arr, index = 0){
 
 
 phone(sortPhone)
+=======
+const filtered = phones.filter(phone => phones.colors == "black")
+
+const brand = phones.sort((a,b)=> a.year - b.year)
+
+const newPhones = (arr, index = 0, nomor = 1)=>{
+  if(index >= arr.length)return
+  console.log(`${nomor}. ${arr[index].name} - ${arr[index].colors}`)
+  return newPhones(arr, index +1, nomor + 1)
+}
+
+newPhones(brand)
+>>>>>>> f22b0669be76fa23fa12717d3a4c2fdbb1c5ff60
