@@ -74,38 +74,11 @@ console.log(enter)
 console.log("Soal 4")
 console.log(batas)
 
-var phones=[
-  {name: "Samsung Galaxy A52", brand: "Samsung", year: 2021, colors: ["black", "white"]},
-  {name: "Redmi Note 10 Pro", brand: "Xiaomi", year: 2021, colors: ["white", "blue"]},
-  {name: "Redmi Note 9 Pro", brand: "Xiaomi", year: 2020, colors: ["white", "blue", "black"]},
-  {name: "Iphone 12", brand: "Apple", year: 2020, colors: ["silver", "gold"]},
-  {name: "Iphone 11", brand: "Apple", year: 2019, colors: ["gold", "black", "silver"]},
-]
+// var phones=[
+//   {name: "Samsung Galaxy A52", brand: "Samsung", year: 2021, colors: ["black", "white"]},
+//   {name: "Redmi Note 10 Pro", brand: "Xiaomi", year: 2021, colors: ["white", "blue"]},
+//   {name: "Redmi Note 9 Pro", brand: "Xiaomi", year: 2020, colors: ["white", "blue", "black"]},
+//   {name: "Iphone 12", brand: "Apple", year: 2020, colors: ["silver", "gold"]},
+//   {name: "Iphone 11", brand: "Apple", year: 2019, colors: ["gold", "black", "silver"]},
+// ]
 
-<<<<<<< HEAD
-const newPhones = phones.filter(phone => phone.colors.includes("black"))
-
-const sortPhone = newPhones.sort((a, b) => a.year - b.year)
-
-function phone(arr, index = 0){
-  if(index >= arr.length) return
-  const phonesNew = arr[index]
-  console.log(`${index + 1}. ${phonesNew.name}, colors available : ${phonesNew.colors}`)
-  phone(arr, index+1)
-}
-
-
-phone(sortPhone)
-=======
-const filtered = phones.filter(phone => phones.colors == "black")
-
-const brand = phones.sort((a,b)=> a.year - b.year)
-
-const newPhones = (arr, index = 0, nomor = 1)=>{
-  if(index >= arr.length)return
-  console.log(`${nomor}. ${arr[index].name} - ${arr[index].colors}`)
-  return newPhones(arr, index +1, nomor + 1)
-}
-
-newPhones(brand)
->>>>>>> f22b0669be76fa23fa12717d3a4c2fdbb1c5ff60
