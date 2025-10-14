@@ -11,19 +11,29 @@ let movies = [
 ]
 
 const getMovies = (req,res)=>{
+    let (title) = req.query
     let result = ""
 
     movies.forEach((item, index)=>{
+      if(item.title.toLowerCase().includes(title)){
         result += `${index+1}. ${item.title} <br>`
-    
-   
-
+      }
     })
          res.send(result)
 }
 
-app.get('/movie', getMovies) 
+const getMovieById = (req,res)=>{
+  let {id} = req.params
 
+  console.log(id)
+
+  let result = movies.find(movies => movies.id == id)
+
+  res.send(`${result.title}`)
+}
+
+app.get('/movie', getMovies) 
+// app.get(`/movie/:id`, getMovieById)
 
 app.get('/', (req, res) => {
   res.send('Hello walawe')
