@@ -2,12 +2,13 @@ const { PrismaClient } = require('../../generated/prisma')
 const prisma = new PrismaClient()
 
 const createMovie = async (req, res) => {
-    let {title, year} = req.body
+    let {title, year, categoryId} = req.body
     try{
         const movies = await prisma.movies.create({
         data: {
             title,
             year,
+            categoryId
         },
         })
 
@@ -63,7 +64,7 @@ res.json({
 
 
 let updateMovie = async (req, res) => {
-    let {title, year} = req.body
+    let {title, year, categoryId} = req.body
     let {id} = req.params
 try{
     const updateMovie = await prisma.movies.update({
@@ -71,7 +72,7 @@ try{
     id: Number(id)
   },
   data: {
-    title, year
+    title, year, categoryId
   },
 })
     res.json({'message': 'Movie Was Succesfully Created', 'status': 'success'})
