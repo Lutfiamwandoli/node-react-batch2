@@ -151,7 +151,7 @@ console.log(samsung)
 
 
 console.log(enter)
-console.log("Soal 6")
+console.log("Soal 7")
 console.log(batas)
 
 const konversiObject = ([nama, domisili, umur]) => ({
@@ -167,7 +167,38 @@ console.log(konversiObject(data))
 
 
 console.log(enter)
-console.log("Soal 6")
+console.log("Soal 8")
 console.log(batas)
+
+ const data1 = [
+  { name: "Ahmad", class: "adonis"},
+  { name: "Regi", class: "laravel"},
+  { name: "Bondra", class: "adonis"},
+  { name: "Iqbal", class: "vuejs" },
+  { name: "Putri", class: "laravel" }
+]
+
+const data2 = [
+  { name: "Yogi", class: "react"},
+  { name: "Fikri", class: "agile"},
+  { name: "Arief", class: "agile"}
+]
+
+const graduate = (...dataSiswa) => {
+  return dataSiswa.reduce((acc, currentData) => {
+    return currentData.reduce((finalObj, student) => {
+      const { name, class: className } = student;
+      
+      return {
+        ...finalObj,
+        [className]: [...(finalObj[className] || []), name]
+      };
+    }, acc);
+  }, {});
+};
+
+console.log(graduate(data1))
+
+console.log(graduate(data2))
 
 
