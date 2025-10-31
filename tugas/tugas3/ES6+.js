@@ -22,7 +22,7 @@ console.log(enter)
 console.log("Soal 1")
 console.log(batas)
 
-let introduce = (name, age, gender, job)=>{
+let introduce = (name, age, job)=>{
   if(name === "john"){ 
   return `Pak ${name} adalah seorang ${job} yang berusia ${age} tahun`
 }else{
