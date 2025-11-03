@@ -1,0 +1,73 @@
+1. Membuat Database
+
+use myshop;
+
+
+2. Membuat Collection dan Memasukkan Data pada Collection
+
+
+db.users.insertMany([
+  {
+    name: "John Doe",
+    email: "john@doe.com",
+    password: "john123"
+  },
+  {
+    name: "Jane Doe",
+    email: "jane@doe.com",
+    password: "jenita123"
+  }
+]);
+
+
+db.categories.insertMany([
+  { name: "gadget" },
+  { name: "cloth" },
+  { name: "men" },
+  { name: "women" },
+  { name: "branded" }
+]);
+
+
+db.items.insertMany([
+  {
+    name: "Sumsang b50",
+    description: "hape keren dari merek sumsang",
+    price: 4000000,
+    stock: 100
+  },
+  {
+    name: "Uniklooh",
+    description: "baju keren dari brand ternama",
+    price: 500000,
+    stock: 50
+  },
+  {
+    name: "IMHO Watch",
+    description: "jam tangan anak yang jujur banget",
+    price: 2000000,
+    stock: 10
+  }
+]);
+
+
+
+3. Mengambil Data dari Database
+
+
+db.users.find({}, { password: 0 });
+
+
+db.items.find({ price: { $gt: 1000000 } });
+
+
+db.items.find({ name: { $regex: /uniklo/i } });
+
+
+
+4. Mengubah Data dari Database
+
+db.items.updateOne(
+  { name: "Sumsang b50" },
+  { $set: { price: 2500000 } }
+);

@@ -202,3 +202,4 @@ console.log(graduate(data1))
 console.log(graduate(data2))
 
 
+ 
